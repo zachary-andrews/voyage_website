@@ -1,32 +1,85 @@
-title = "Voyage Gaming"
-baseURL = "https://example.com"
-languageCode = "en-us"
-theme = "gohugo-theme-ananke"
+baseURL                   = "https://example.com"
+builddrafts                = false
+languageCode               = "zn-Hans"
+canonifyurls               = true
+contentdir                 = "content"
+layoutdir                  = "layouts"
+publishdir                 = "public"
+enableEmoji                = true
+hasCJKLanguage             = true
+summaryLength              = 200
+Paginate                   = 3
 
-MetaDataFormat = "yaml"
-DefaultContentLanguage = "en"
-SectionPagesMenu = "main"
-Paginate = 3 # this is set low for demonstrating with dummy content. Set to a higher number
-googleAnalytics = ""
-enableRobotsTXT = true
+theme                      = "AllinOne"
+title                      = "Voyage Gaming"
 
-[sitemap]
-  changefreq = "monthly"
-  priority = 0.5
-  filename = "sitemap.xml"
+pygmentsuseclasses         = true
+
+
+[permalinks]
+  blog                     = "blog/:year-:month/:slug/"
+
+
+[taxonomies]
+  tag                      = "tags"
+  series                   = "series"
+  category                 = "categories"
+
+
+[menu]
+  [[menu.main]]
+    name                   = "Blog"
+    weight                 = -120
+    identifier             = "blog"
+    url                    = "blog/"  
+
+  [[menu.main]]
+    name                   = "Moment"
+    weight                 = -110
+    identifier             = "moment"
+    url                    = "moment/" 
+
+  [[menu.main]]
+    name                   = "About"
+    weight                 = -100
+    identifier             = "about"
+    url                    = "about/"  
+
+ 
 
 [params]
-  favicon = ""
-  description = "The future of esports orgnizations"
-  facebook = "https://facebook.com/voyagegg"
-  twitter = "https://twitter.com/voyagegg"
-  instagram = ""
-  youtube = ""
-  github = ""
-  gitlab = ""
-  linkedin = ""
-  mastodon = ""
-  # choose a background color from any on this page: http://tachyons.io/docs/themes/skins/ and preface it with "bg-"
-  background_color_class = "bg-black"
-  featured_image = "/images/gohugo-default-sample-hero-image.jpg"
-  recent_posts_number = 2
+  faviconfile              = "img/Logo-Light-Trans.png"               # from static/
+  avatar                   = "../img/Logo-Light-Trans.svg"             # path to image in static dir e.g img/avatar.png 
+  author                   = "Voyage Gaming"
+  description              = ["The future of gaming"]           # appears in the site header when set to a non-empty string
+  welcome_head             = "Welcome to Voyage Gaming"
+  welcome_word             = "~ enjoy your stay ~"
+
+  latestpostscount         = 5                             # how many posts to display on the home page
+  bloggroupby              = 'month'
+  dateform                 = "Jan 2, 2006"
+  dateformfull             = "2006-01-02  Monday  15:04:05"
+  noshowreadtime           = false                         # if true, don't show "<x> minutes read" in posts
+
+  # slides
+  slidesDirPath            = "themes/AllinOne/static/img/header-slides"    # path to image in local dir (path for hugo)
+  slidesDirPathURL         = "img/header-slides"    # path to image in static dir (for static pages)
+
+  # highlighting 
+  highlightjs              = true
+
+  # latex
+  katex                    = true
+
+  # links
+  email                    = "admin@voyage.gg"
+  linkedin                 = "//linkedin.com/in/voyagegaming"
+  facebook                 = "//facebook.com/voyagegg"
+  twitter                  = "//twitter.com/voyagegg" 
+  instagram                = "//instagram.com/voyagegg"
+  youtube                  = "//youtube.com/voyagegg"                         # include RSS <link> tag in <head> and show RSS icon
+  
+  # analytics
+  googleAnalytics          = "your-google-analytic-id"
+    
+    
